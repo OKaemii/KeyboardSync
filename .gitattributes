@@ -1,0 +1,6 @@
+# Use CRLF for files intended specifically for Windows
+*.bat   text eol=crlf
+
+# Specify diff drivers
+*.java  diff=java
+*.md    diff=markdown
