@@ -4,6 +4,22 @@
 package KeyboardSync;
 
 public class App {
+    // TODO
+    private float[][] conv2GreyScale(float[][] base, int im_width, int im_height){
+        float[][] im = new float[im_width][im_height];
+        return im;
+    }
+    // TODO
+    private boolean isGreyScale(float[][] base, int im_width, int im_height){
+        return false;
+    }
+
+    // TODO
+    private float[][] sobel(float[][] base, int im_width, int im_height){
+        float[][] im = new float[im_width][im_height];
+        return im;
+    }
+
     public String getGreeting() {
         return "Hello World!";
     }
