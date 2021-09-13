@@ -9,3 +9,4 @@
 
 rootProject.name = "KeyboardSync"
 include("app")
+include("utils")

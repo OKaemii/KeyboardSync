@@ -1,4 +1,4 @@
-package KeyboardSync;
+package javision;
 
 import java.awt.image.BufferedImage;
 

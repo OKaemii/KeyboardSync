@@ -3,11 +3,15 @@
  */
 package KeyboardSync;
 
-import java.io.File;
-import java.io.IOException;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 import javax.imageio.ImageIO;
+
+import javision.EdgeDetection;
+import javision.Vision;
 
 public class App {
     static final String PATH = System.getProperty("user.dir");
@@ -16,7 +20,7 @@ public class App {
     public static void main(String[] args) {
         EdgeDetection ed = new EdgeDetection();
         Vision cv = new Vision();
-        
+
         BufferedImage img = null;
 
         // grab image from source
@@ -30,10 +34,10 @@ public class App {
         // edge detection with sobel
         BufferedImage sobImg = ed.sobel(img);
 
-        // try to houghspace?
+        // try to hough-space?
         BufferedImage houImg = cv.houghLines(sobImg, 1.0, true);
         Graphics2D canvas = houImg.createGraphics();
-        
+
         canvas.draw3DRect(0, 10, 50, 20, true);
 
         File ouptut = new File(PATH + MEDIA + "output.png");

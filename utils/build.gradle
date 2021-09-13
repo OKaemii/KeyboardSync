@@ -8,7 +8,7 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
+    id 'java-library'
 }
 
 java {
@@ -29,8 +29,6 @@ dependencies {
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    implementation project(':utils')
-
     // This dependency is used by the application.
     // implementation 'com.google.guava:guava:30.0-jre'
 }
@@ -38,9 +36,4 @@ dependencies {
 tasks.named('test') {
     // Use junit platform for unit tests.
     useJUnitPlatform()
-}
-
-application {
-    // Define the main class for the application.
-    mainClass = 'KeyboardSync.App'
 }
